@@ -1,0 +1,15 @@
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\bin\Debug\net6.0\1.exe
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\bin\Debug\net6.0\1.deps.json
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\bin\Debug\net6.0\1.runtimeconfig.json
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\bin\Debug\net6.0\1.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\bin\Debug\net6.0\1.pdb
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.csproj.AssemblyReference.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.GeneratedMSBuildEditorConfig.editorconfig
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.AssemblyInfoInputs.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.AssemblyInfo.cs
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.csproj.CoreCompileInputs.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\refint\1.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.pdb
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\1.genruntimeconfig.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\1\obj\Debug\net6.0\ref\1.dll

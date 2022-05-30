@@ -1,0 +1,15 @@
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\bin\Debug\net6.0\2.exe
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\bin\Debug\net6.0\2.deps.json
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\bin\Debug\net6.0\2.runtimeconfig.json
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\bin\Debug\net6.0\2.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\bin\Debug\net6.0\2.pdb
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.csproj.AssemblyReference.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.GeneratedMSBuildEditorConfig.editorconfig
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.AssemblyInfoInputs.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.AssemblyInfo.cs
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.csproj.CoreCompileInputs.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\refint\2.dll
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.pdb
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\2.genruntimeconfig.cache
+D:\programier\c++\project\LAB\OOP_PRAC\1\2\2\obj\Debug\net6.0\ref\2.dll
