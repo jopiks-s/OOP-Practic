@@ -8,6 +8,47 @@ namespace _7
 {
     class Program
     {
+        class Bus : IComparable
+        {
+            public double mass;
+            public Bus(double mass)
+            {
+                this.mass = mass;
+            }
+            public int CompareTo(object obj)
+            {
+                return mass.CompareTo(((Bus)obj).mass);
+            }
+            public static bool operator >(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) == 1;
+            }
+
+            public static bool operator <(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) == -1;
+            }
+
+            public static bool operator >=(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) == 1 || b1.CompareTo(b2) == 0;
+            }
+
+            public static bool operator <=(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) == -1 || b1.CompareTo(b2) == 0;
+            }
+
+            public static bool operator ==(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) == 0;
+            }
+
+            public static bool operator !=(Bus b1, Bus b2)
+            {
+                return b1.CompareTo(b2) != 0;
+            }
+        }
         public static List<int> Sort(List<int> list, bool asc = true)
         {
             bool change = false;
@@ -56,16 +97,20 @@ namespace _7
             List<int> num = new List<int>() { 2, 3, 423, -1, 14 };
             List<string> strings = new List<string>() { "ab", "aa", "1c" };
             List<double> f = new List<double>() { 1.1, -7.8, 99.99, 13.45};
+            List<Bus> b = new List<Bus>() { new Bus(15.3), new Bus(10), new Bus(12), new Bus(17)};
 
             num = Sort(num);
             strings = Sort<string>(strings);
             f = Sort<double>(f, false);
+            b = Sort<Bus>(b);
 
             num.ForEach((a) => { Console.Write($"{a} "); });
             Console.WriteLine();
             strings.ForEach((a) => { Console.Write($"{a} "); });
             Console.WriteLine();
-            f.ForEach((a) => { Console.Write($"{a} "); });
+            f .ForEach((a) => { Console.Write($"{a} "); });
+            Console.WriteLine();
+            b.ForEach((a) => { Console.Write($"{a.mass} t, "); });
             Console.WriteLine();
 
             Console.ReadLine();
