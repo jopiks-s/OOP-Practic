@@ -4,25 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bwee
+namespace _1
 {
     class Fraction
     {
-        public float fraction;
+        public long fraction;
         public long numerator;
         public long denominator;
-        public Fraction(float fraction, long numerator, long denominator)
+        public Fraction(long fraction, long numerator, long denominator)
         {
             this.fraction = fraction;
             this.numerator = numerator;
             this.denominator = denominator;
             Cut();
         }
+        public void NormalView()
+        {
+            numerator += denominator * fraction;
+            fraction = 0;
+            if (numerator < 0 && denominator < 0)
+            {
+                numerator *= -1;
+                denominator *= -1;
+            }
+            Cut();
+        }
+        public void MixedView()
+        {
+            fraction = (long)Math.Floor(Convert.ToDouble(numerator) / Convert.ToDouble(denominator));
+            numerator -= fraction * denominator;
+        }
         public void Cut()
         {
             long a = this.numerator;
             long b = this.denominator;
-            while (a != 0 && b!= 0)
+            while (a > 0 && b > 0)
             {
                 if (a > b)
                     a = a % b;
@@ -30,6 +46,7 @@ namespace Bwee
                     b = b % a;
             }
             long cut = a + b;
+            cut = Math.Abs(cut);
             numerator /= cut;
             denominator /= cut;
         }
@@ -40,7 +57,7 @@ namespace Bwee
                 return new Fraction(0, (long)number, 1);
 
             float decimals = number.ToString().Split(',')[1].Length;
-            long den = (long)Math.Pow(10, decimals%11);
+            long den = (long)Math.Pow(10, decimals % 11);
             long num = (long)(number * den);
             return new Fraction(0, num, den);
         }
@@ -50,25 +67,30 @@ namespace Bwee
             return ((float)(number.numerator) + number.fraction * number.denominator) / number.denominator;
         }
 
-        public static Fraction operator + (Fraction f1, Fraction f2)
+        public static Fraction operator +(Fraction f1, Fraction f2)
         {
-            var f3 = new Fraction(0,1,1);
-            f3.numerator = f1.numerator*f2.denominator + f2.numerator*f1.denominator;
+            f1.NormalView();
+            f2.NormalView();
+            var f3 = new Fraction(0, 1, 1);
+            f3.numerator = f1.numerator * f2.denominator + f2.numerator * f1.denominator;
             f3.denominator = f1.denominator * f2.denominator;
+            f3.NormalView();
             return f3;
         }
 
         public static Fraction operator -(Fraction f1, Fraction f2)
         {
-            f2.numerator *= -1;
-            return f1 + f2;
+            return f1 + new Fraction(f2.fraction, -f2.numerator, f2.denominator);
         }
 
         public static Fraction operator *(Fraction f1, Fraction f2)
         {
-            var f3 = new Fraction(0,1,1);
+            var f3 = new Fraction(0, 1, 1);
+            f1.NormalView();
+            f2.NormalView();
             f3.numerator = f1.numerator * f2.numerator;
             f3.denominator = f1.denominator * f2.denominator;
+            f3.NormalView();
             return f3;
         }
 
@@ -83,7 +105,7 @@ namespace Bwee
 
         public void Print()
         {
-            Console.WriteLine($"{numerator}/{denominator}");
+            Console.WriteLine($"{(fraction != 0 ? fraction : "")} {numerator}/{denominator}");
         }
     }
 
@@ -112,7 +134,7 @@ namespace Bwee
         static public ComplexNumber operator *(ComplexNumber n1, ComplexNumber n2)
         {
             var n3 = new ComplexNumber(0, 0);
-            n3.real = n1.real * n2.real - n1.imaginary*n2.imaginary;
+            n3.real = n1.real * n2.real - n1.imaginary * n2.imaginary;
             n3.imaginary = n1.real * n2.imaginary + n2.real * n1.imaginary;
             return n3;
         }
@@ -122,7 +144,7 @@ namespace Bwee
             float denominator = (n2 * new ComplexNumber(n2.real, -n2.imaginary)).real;
             n2.imaginary *= -1;
             var n3 = n1 * n2;
-            n3.real = (float)Math.Round(n3.real/denominator, 1);
+            n3.real = (float)Math.Round(n3.real / denominator, 1);
             n3.imaginary = (float)Math.Round(n3.imaginary / denominator, 1);
             return n3;
         }
@@ -137,7 +159,7 @@ namespace Bwee
         {
             var n = new ComplexNumber(0, 0);
             n.real = Int32.Parse(str.Split(' ')[0]);
-            n.imaginary= Int32.Parse(str.Split(' ')[1].Trim('i'));
+            n.imaginary = Int32.Parse(str.Split(' ')[1].Trim('i'));
             return n;
         }
     }
@@ -190,7 +212,7 @@ namespace Bwee
 
         static public implicit operator int(myDate d)
         {
-            return (d.year*12+d.month)*31+d.day;
+            return (d.year * 12 + d.month) * 31 + d.day;
         }
     }
 
@@ -242,10 +264,13 @@ namespace Bwee
         static void Main(string[] args)
         {
             Fraction f1 = new Fraction(0, 100, 45);
-            Fraction f2 = (Fraction)10.4;
+            Fraction f2 = (Fraction)(-1.2);
             Fraction f3 = f1 + f2;
             f1.Print();
             f2.Print();
+            f3.Print();
+            f3.MixedView();
+            f3.Print();
             Console.WriteLine(f1 > f2);
 
             ComplexNumber c1 = new ComplexNumber(2, 3);
@@ -258,7 +283,7 @@ namespace Bwee
             Console.WriteLine(c3.toString());
 
             myDate d1 = new myDate(1995, 9, 12);
-            myDate d2 = new myDate(0,0, 31);
+            myDate d2 = new myDate(0, 0, 31);
             myDate d3 = myDate.toDate("2022/12/11");
 
             Console.WriteLine((d1 - d2).toString());
