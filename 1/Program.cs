@@ -18,6 +18,11 @@ namespace _1
             this.denominator = denominator;
             Cut();
         }
+
+        public Fraction(Fraction f) : this(f.fraction, f.numerator, f.denominator)
+        { }
+        public Fraction(double a) : this((Fraction)a)
+        { }
         public void NormalView()
         {
             numerator += denominator * fraction;
@@ -264,7 +269,7 @@ namespace _1
         static void Main(string[] args)
         {
             Fraction f1 = new Fraction(0, 100, 45);
-            Fraction f2 = (Fraction)(-1.2);
+            Fraction f2 = new Fraction(1.2);
             Fraction f3 = f1 + f2;
             f1.Print();
             f2.Print();
