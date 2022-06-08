@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\misha\\.nuget\\packages\\": {}
+    "C:\\Users\\ilyaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ainstall\\8\\8.csproj",
+      "projectUniqueName": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\8\\8.csproj",
       "projectName": "8",
-      "projectPath": "D:\\Ainstall\\8\\8.csproj",
-      "packagesPath": "C:\\Users\\misha\\.nuget\\packages\\",
-      "outputPath": "D:\\Ainstall\\8\\obj\\",
+      "projectPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\8\\8.csproj",
+      "packagesPath": "C:\\Users\\ilyaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ilyaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

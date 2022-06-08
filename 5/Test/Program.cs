@@ -221,7 +221,6 @@ namespace Test
 
         public void PrintArray()
         {
-            Console.WriteLine("Елементи в масиві :");
             foreach (var item in shpArray)
             {
                 if(item != null)
@@ -240,19 +239,25 @@ namespace Test
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
 
+
+
             Circuit circuit = new Circuit(5);
             Square square = new Square(5);
             Pentagon pentagon = new Pentagon(5);
 
             Picture picture = new Picture(3);
+            Console.WriteLine("Заповнення масиву...\n");
             picture.FillArray(circuit, square, pentagon);
+            Console.WriteLine("\nВивід масиву фігур : \n");
             picture.PrintArray();
 
             Picture picture2 = new Picture(3);
+            Console.WriteLine("\nЗаповнення масиву трикутників...\n");
             Triangle eqTriangle = new EqTriangle(3);
             Triangle isTriangle = new IsTriangle(3, 45);
             Triangle rectTriangle = new RectTriangle(3, 5);
             picture2.FillArray(eqTriangle, isTriangle, rectTriangle);
+            Console.WriteLine("\nВивід масиву трикутників : \n");
             picture2.PrintArray();
 
             Console.ReadLine();

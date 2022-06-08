@@ -18,7 +18,7 @@ namespace ConsoleApp1
 
         class WrongOperands : Exception
         {
-            public WrongOperands(string operands) : base("Wrong opertands pass to calculate")
+            public WrongOperands(string operands) : base("Wrong operands pass to calculate")
             {
                 Console.WriteLine($"Not a value to calculate: [{operands}]");
             }
@@ -53,16 +53,16 @@ namespace ConsoleApp1
                 try
                 {
                     faile = false;
-                    Console.Write("left operator: ");
+                    Console.Write("left operand: (float)");
                     var left_out = Console.ReadLine();
                     if (!float.TryParse(left_out, out float left))
                         throw new WrongOperands(left_out);
 
-                    Console.Write("math operator: ");
+                    Console.Write("math operation: (+,-,*,/,^)");
                     var oper = Console.ReadLine();
 
                    
-                    Console.Write("right operand: ");
+                    Console.Write("right operand: (float)");
                     var right_out = Console.ReadLine();
                     if (!float.TryParse(right_out, out float right))
                         throw new WrongOperands(right_out);
@@ -71,7 +71,10 @@ namespace ConsoleApp1
 
                     Console.WriteLine(Calculate(left, right, oper));
 
-                } catch(Exception e) { faile = true; }
+                } catch(Exception e) 
+                {
+                    faile = true; 
+                }
             }    while (faile);
             Console.ReadLine();
         }

@@ -145,6 +145,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             LinkedList<Item> list = new LinkedList<Item>();
+            Console.WriteLine("Basic List : \n");
             MilkProduct m1 = new MilkProduct(50, 950, new float[] { 50, 50, 170 }, "GoodMilk", "AGM",list, true, "Lactic", "Solid", false, false, new DateTime(2021, 11, 6), new TimeSpan(6, 0, 0), 2.5F, false);
             MilkProduct m2 = new MilkProduct(55, 950, new float[] { 200, 20, 40 }, "MITII", "SVE",  list, true, "Lactic", "Solid", false, false, new DateTime(2021, 11, 7), new TimeSpan(4, 0, 0), 3.2F, false);
             MilkProduct m3 = new MilkProduct(105, 1890, new float[] { 65, 40, 200 }, "LargeMamy", "AGN",  list, false, "Lactic", "Membrance", false, false, new DateTime(2021, 10, 26), new TimeSpan(10, 0, 0), 1F, true);
@@ -155,7 +156,7 @@ namespace ConsoleApp1
 
             Item.PrintList();
             Console.WriteLine("\n");
-
+            Console.WriteLine("Advanced List : \n");
             Toy t1 = new Toy(270, 105, new float[] { 220, 110, 80 }, "LOOTGun", "IBM",  list, false, 10, true, true, "Dynamic, Shooter");
             Toy t2 = new Toy(150, 20, new float[] { 25, 15, 5 }, "PheraCar", "Hoot",  list, true, 6, true, false, "Strategy, Imagination");
             Toy t3 = new Toy(370, 120, new float[] { 50, 30, 110 }, "PrettyDoll", "MMS",  list, true, 6, false, false, "Strategy, Imagination");

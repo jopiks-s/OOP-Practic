@@ -5,3 +5,10 @@ C:\Users\ilyaa\source\repos\Test\Test\obj\Debug\Test.csproj.AssemblyReference.ca
 C:\Users\ilyaa\source\repos\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\ilyaa\source\repos\Test\Test\obj\Debug\Test.exe
 C:\Users\ilyaa\source\repos\Test\Test\obj\Debug\Test.pdb
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\bin\Debug\Test.exe.config
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\bin\Debug\Test.exe
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\bin\Debug\Test.pdb
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\obj\Debug\Test.exe
+C:\Users\ilyaa\Downloads\OOP-Practic\5\Test\obj\Debug\Test.pdb
