@@ -39,7 +39,7 @@ namespace ConsoleApp1
                 case "+": return f1 + f2;
                 case "-": return f1 - f2;
                 case "*": return f1 * f2;
-                case "/": return f1 / f2;
+                case "/": if (f2 == 0) throw new TryDivideByZero();  return f1 / f2;
                 case "^": return (float)Math.Pow(f1, f2);
                 default: throw new WrongOperator(oper);
             }
@@ -53,22 +53,23 @@ namespace ConsoleApp1
                 try
                 {
                     faile = false;
+                    Console.Write("left operator: ");
+                    var left_out = Console.ReadLine();
+                    if (!float.TryParse(left_out, out float left))
+                        throw new WrongOperands(left_out);
+
+                    Console.Write("math operator: ");
+                    var oper = Console.ReadLine();
+
+                   
                     Console.Write("right operand: ");
                     var right_out = Console.ReadLine();
                     if (!float.TryParse(right_out, out float right))
                         throw new WrongOperands(right_out);
 
-                    Console.Write("math operator: ");
-                    var oper = Console.ReadLine();
+                    
 
-                    Console.Write("left opertator: ");
-                    var left_out = Console.ReadLine();
-                    if (!float.TryParse(left_out, out float left))
-                        throw new WrongOperands(left_out);
-                    if (left == 0)
-                        throw new TryDivideByZero();
-
-                    Console.WriteLine(Calculate(right, left, oper));
+                    Console.WriteLine(Calculate(left, right, oper));
 
                 } catch(Exception e) { faile = true; }
             }    while (faile);

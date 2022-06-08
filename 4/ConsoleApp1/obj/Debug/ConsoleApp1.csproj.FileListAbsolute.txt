@@ -5,3 +5,10 @@ C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.cspro
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\ilyaa\Downloads\OOP-Practic\4\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
