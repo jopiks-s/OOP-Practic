@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "cUXNPEM+VdHGXr+u5ObUASqAkdyMiF+o6PhyJEfbd4VGpsJKnzIKYrs9yBcElk67Wm8um0EnMYZy+s0V0oI5UQ==",
+  "dgSpecHash": "cCSt8b+J9jWfK9C6Z6qVlmbmpHu00WLkH8Xcvl/SvHCADx45WaMl2y7Gl3bSZwjQyZAqH5CRgKJF+SEVWxriAQ==",
   "success": true,
-  "projectFilePath": "D:\\Aintstall\\1\\1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\1\\1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ilyaa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\ilyaa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ilyaa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ilyaa\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -34,10 +34,11 @@ namespace _1
             }
             Cut();
         }
-        public void MixedView()
+        public Fraction MixedView()
         {
             fraction = (long)Math.Floor(Convert.ToDouble(numerator) / Convert.ToDouble(denominator));
             numerator -= fraction * denominator;
+            return this;
         }
         public void Cut()
         {
@@ -108,9 +109,14 @@ namespace _1
             return f1 * f2;
         }
 
+        public override string ToString()
+        {
+            return $"{(fraction != 0 ? fraction + " " : "")}{numerator}/{denominator}";
+        }
+
         public void Print()
         {
-            Console.WriteLine($"{(fraction != 0 ? fraction : "")} {numerator}/{denominator}");
+            Console.WriteLine(ToString());
         }
     }
 
@@ -154,7 +160,7 @@ namespace _1
             return n3;
         }
 
-        public string toString()
+        public override string ToString()
         {
             string symb = imaginary >= 0 ? "+" : "";
             return $"{this.real} {symb}{imaginary}i";
@@ -205,7 +211,7 @@ namespace _1
             return new myDate(Math.Max(0, y), m, d);
         }
 
-        public string toString()
+        public override string ToString()
         {
             return $"{year}/{month}/{day}";
         }
@@ -248,7 +254,7 @@ namespace _1
             return new myTime(h, m, s);
         }
 
-        public string toString()
+        public override string ToString()
         {
             return $"{(h > 9 ? h : "0" + h)}:{(m > 9 ? m : "0" + m)}:{(s > 9 ? s : "0" + s)}";
         }
@@ -268,37 +274,50 @@ namespace _1
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("Демонстрація класу дробу");
             Fraction f1 = new Fraction(0, 100, 45);
             Fraction f2 = new Fraction(1.2);
             Fraction f3 = f1 + f2;
+            Console.WriteLine("1 дріб :");
             f1.Print();
+            Console.WriteLine("2 дріб :");
             f2.Print();
-            f3.Print();
-            f3.MixedView();
-            f3.Print();
-            Console.WriteLine(f1 > f2);
+            Console.WriteLine($"{f1} + {f2} = {f3}");
 
+            Console.WriteLine($"Виділення цілої частини : {f1 + f2} = {f3.MixedView()}");
+
+            Console.WriteLine("Чи більша 1 дріб ніж 2 :");
+            Console.WriteLine(f1 > f2);
+            Console.WriteLine("\nДемонстрація класу комплексного числа");
             ComplexNumber c1 = new ComplexNumber(2, 3);
             ComplexNumber c2 = new ComplexNumber(4, -5);
             ComplexNumber c3 = ComplexNumber.toComplex("2 +4i");
+            Console.WriteLine("1 комплексне число :");
+            Console.WriteLine(c1);
+            Console.WriteLine("2 комплексне число :");
+            Console.WriteLine(c2);
+            Console.WriteLine($"{c1} / {c2} =");
+            Console.WriteLine((c1 / c2));
 
-            Console.WriteLine(c1.toString());
-            Console.WriteLine(c2.toString());
-            Console.WriteLine((c1 / c2).toString());
-            Console.WriteLine(c3.toString());
-
+            Console.WriteLine("\nДемонстрація класу дати");
             myDate d1 = new myDate(1995, 9, 12);
             myDate d2 = new myDate(0, 0, 31);
             myDate d3 = myDate.toDate("2022/12/11");
 
-            Console.WriteLine((d1 - d2).toString());
-            Console.WriteLine(d3.toString());
-            Console.WriteLine(d1 < d3);
+            Console.WriteLine($"d1 = {d1}\nd2 = {d2}");
+
+            Console.WriteLine($"{d1} - {d2} = {(d1 - d2)}");
+            Console.WriteLine($"d3 = {d3}");
+            Console.WriteLine($"{d1} < {d2} = {d1 < d2}");
+
+            Console.WriteLine("\nДемонстрація класу часу");
 
             myTime t1 = myTime.toTime("1:1:35");
             myTime t2 = myTime.toTime("0:0:150");
 
-            Console.WriteLine((t1 - t2).toString());
+            Console.WriteLine( $"{t1} - {t2} = {(t1 - t2)}");
 
             Console.ReadLine();
         }
