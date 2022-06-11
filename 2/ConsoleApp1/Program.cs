@@ -24,6 +24,8 @@ namespace weee
 
             copy_values[copy_c] = copy_values[copy_r];
 
+            Console.WriteLine($"Initialize matrix...");
+
             for (int i=0;i<N;i++)
             {
                 mat.Add(new List<int>());
@@ -48,7 +50,9 @@ namespace weee
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine($"Done!\n");
 
+            Console.WriteLine($"Start search for k =>");
             for (int row = 0; row < N; row++)
             {
                 for (int col = 0; col < N; col++)
@@ -64,7 +68,13 @@ namespace weee
                         }
                     }
                     if (same)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine($"Find same -> row: {row}, column: {col}");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                        Console.WriteLine($"Don't same -> row: {row}, column: {col}");
                 }
             }
             Console.ReadLine();

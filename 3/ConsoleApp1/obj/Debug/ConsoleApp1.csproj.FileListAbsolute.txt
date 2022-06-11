@@ -5,3 +5,11 @@ C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.cspro
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\ilyaa\Downloads\pra\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\AInstall\3\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\AInstall\3\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\AInstall\3\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\AInstall\3\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\AInstall\3\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\AInstall\3\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\AInstall\3\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\AInstall\3\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
