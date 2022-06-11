@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\9\\9.csproj": {}
+    "D:\\Ainstall\\9\\9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\9\\9.csproj": {
+    "D:\\Ainstall\\9\\9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\9\\9.csproj",
+        "projectUniqueName": "D:\\Ainstall\\9\\9.csproj",
         "projectName": "9",
-        "projectPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\9\\9.csproj",
-        "packagesPath": "C:\\Users\\ilyaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\9\\obj\\",
+        "projectPath": "D:\\Ainstall\\9\\9.csproj",
+        "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+        "outputPath": "D:\\Ainstall\\9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ilyaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +49,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -57,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
