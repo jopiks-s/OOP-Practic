@@ -271,7 +271,7 @@ namespace _8
 
                 ComboBox Boy_bool_choose = new ComboBox();
                 Boy_bool_choose.Name = "Boy_bool_choose";
-                Boy_bool_choose.Items.AddRange(new object[] { "No", "Yes" });
+                Boy_bool_choose.Items.AddRange(new object[] { "Girl", "Boy" });
                 Boy_bool_choose.Size = new System.Drawing.Size(200, 27);
                 Boy_bool_choose.SelectedIndex = 0;
                 Boy_bool_choose.DropDownStyle = ComboBoxStyle.DropDownList;
