@@ -12,7 +12,7 @@ namespace ConsoleApp1
         {
             public WrongOperator(string oper) : base("Wrong opertor pass to calculate")
             {
-                Console.WriteLine($"Not a math opertor: [{oper}]");
+                Console.WriteLine($"Not a math operator: [{oper}]");
             }
         }
 
@@ -48,32 +48,50 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             bool faile = false;
+            Console.WriteLine("Simple calculator load...");
+            Console.Write("First you write ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("left operand");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(", after, ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("operation ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("to calculate, and then ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("right operand\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Example: 2 + 2\n");
             do
             {
                 try
                 {
                     faile = false;
-                    Console.Write("left operand: (float)");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("left operand (float): ");
+                    Console.ForegroundColor = ConsoleColor.White;
                     var left_out = Console.ReadLine();
                     if (!float.TryParse(left_out, out float left))
                         throw new WrongOperands(left_out);
 
-                    Console.Write("math operation: (+,-,*,/,^)");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("math operation (+,-,*,/,^): ");
+                    Console.ForegroundColor = ConsoleColor.White;
                     var oper = Console.ReadLine();
 
-                   
-                    Console.Write("right operand: (float)");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("right operand (float): ");
+                    Console.ForegroundColor = ConsoleColor.White;
                     var right_out = Console.ReadLine();
                     if (!float.TryParse(right_out, out float right))
                         throw new WrongOperands(right_out);
-
-                    
 
                     Console.WriteLine(Calculate(left, right, oper));
 
                 } catch(Exception e) 
                 {
                     faile = true; 
+                    Console.WriteLine();
                 }
             }    while (faile);
             Console.ReadLine();

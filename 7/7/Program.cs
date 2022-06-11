@@ -11,6 +11,10 @@ namespace _7
         class Bus : IComparable
         {
             public double mass;
+            public override string ToString()
+            {
+                return mass.ToString();
+            }
             public Bus(double mass)
             {
                 this.mass = mass;
@@ -60,7 +64,7 @@ namespace _7
                     Predicate<int> compare = asc ?
                     (left) => list[i] > left :
                     (left) => list[i] < left;
-                    if (compare(list[i+1]))
+                    if (compare(list[i + 1]))
                     {
                         int a = list[i];
                         list[i] = list[i + 1];
@@ -72,7 +76,7 @@ namespace _7
             return list;
         }
 
-        public static List<T> Sort<T>(List<T> list, bool asc = true) where T: IComparable
+        public static List<T> Sort<T>(List<T> list, bool asc = true) where T : IComparable
         {
             bool change = false;
             do
@@ -91,27 +95,47 @@ namespace _7
                 }
             } while (change);
             return list;
-        }    
+        }
+
+        public static void PrintList<T>(List<T> l)
+        {
+            Console.WriteLine();
+            l.ForEach( (a) => Console.Write(a.ToString()+" "));
+            Console.WriteLine();
+        }
         static void Main(string[] args)
         {
+            Console.WriteLine("Initialize array's...");
             List<int> num = new List<int>() { 2, 3, 423, -1, 14 };
             List<string> strings = new List<string>() { "ab", "aa", "1c" };
-            List<double> f = new List<double>() { 1.1, -7.8, 99.99, 13.45};
-            List<Bus> b = new List<Bus>() { new Bus(15.3), new Bus(10), new Bus(12), new Bus(17)};
+            List<double> f = new List<double>() { 1.1, -7.8, 99.99, 13.45 };
+            List<Bus> b = new List<Bus>() { new Bus(15.3), new Bus(10), new Bus(12), new Bus(17) };
+            Console.WriteLine("Done!\n\n");
 
+            Console.Write("num array (int):");
+            PrintList<int>(num);
+            Console.Write("strings array (string):");
+            PrintList<string>(strings);
+            Console.Write("f array (double):");
+            PrintList<double>(f);
+            Console.Write("b array (Bus):");
+            PrintList<Bus>(b);
+
+            Console.WriteLine("\n\nStart sort array's...");
             num = Sort(num);
             strings = Sort<string>(strings);
             f = Sort<double>(f, false);
             b = Sort<Bus>(b);
+            Console.WriteLine("Done!\n\n");
 
-            num.ForEach((a) => { Console.Write($"{a} "); });
-            Console.WriteLine();
-            strings.ForEach((a) => { Console.Write($"{a} "); });
-            Console.WriteLine();
-            f .ForEach((a) => { Console.Write($"{a} "); });
-            Console.WriteLine();
-            b.ForEach((a) => { Console.Write($"{a.mass} t, "); });
-            Console.WriteLine();
+            Console.Write("num array (int):");
+            PrintList<int>(num);
+            Console.Write("strings array (string):");
+            PrintList<string>(strings);
+            Console.Write("f array (double):");
+            PrintList<double>(f);
+            Console.Write("b array (Bus):");
+            PrintList<Bus>(b);
 
             Console.ReadLine();
         }
