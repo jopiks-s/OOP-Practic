@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\8\\8.csproj": {}
+    "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\9\\9.csproj": {}
   },
   "projects": {
-    "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\8\\8.csproj": {
+    "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\9\\9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\8\\8.csproj",
-        "projectName": "8",
-        "projectPath": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\8\\8.csproj",
+        "projectUniqueName": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\9\\9.csproj",
+        "projectName": "9",
+        "projectPath": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\9\\9.csproj",
         "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-        "outputPath": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\8\\obj\\",
+        "outputPath": "D:\\AInstall\\OOP-Practic-main\\OOP-Practic-main\\9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",

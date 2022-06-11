@@ -78,7 +78,7 @@ namespace _8
             MessageBox.Show($"Firm name: {FirmName}, Name: {Name}, " +
                 $"Price: {cost}, Mass: {mass}, Size: x {Size[0]}, y {Size[1]}, z {Size[2]}, " +
                 $"Category: {Category}, Package type: {PackageType}, 18+: {FullAgeAcces}, " +
-                $"Health hurting: {HealthHurting}");
+                $"Health hurting: {HealthHurting}", "Print fuction", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public product(int c, float m, float[] s, string n, string fname, string cat, string p, bool age, bool hurt)
@@ -97,8 +97,8 @@ namespace _8
 
         public float GetCosine()
         {
-            float res = (float)Math.Cos(FatPercent + Convert.ToInt32(Natural));
-            MessageBox.Show($"Cosine of {FatPercent + Convert.ToInt32(Natural)}: {res}");
+            float res = (float)Math.Cos(FatPercent+Convert.ToInt32(Natural));
+            MessageBox.Show($"Cosine of {FatPercent + Convert.ToInt32(Natural)}: {res}", "Cosine function", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return res;
         }
         public override void EraseMy()
@@ -113,7 +113,7 @@ namespace _8
                 $"Price: {cost}, Mass: {mass}, Size: x {Size[0]}, y {Size[1]}, z {Size[2]}, " +
                 $"Category: {Category}, Package type: {PackageType}, 18+: {FullAgeAcces}, " +
                 $"Health hurting: {HealthHurting}, " +
-                $"Fat percent: {FatPercent}, Natural: {Natural}");
+                $"Fat percent: {FatPercent}, Natural: {Natural}", "Print fuction", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public milk_product(int c, float m, float[] s, string n, string fname,
@@ -134,7 +134,7 @@ namespace _8
         public void Move()
         {
             IMove.location += IMove.velocity;
-            MessageBox.Show($"My velocity: {IMove.velocity}, my location: {IMove.location}");
+            MessageBox.Show($"My velocity: {IMove.velocity}, my location: {IMove.location}", "Move fuction", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public override void Say()
@@ -142,7 +142,7 @@ namespace _8
             MessageBox.Show($"Firm name: {FirmName}, Name: {Name}, " +
                 $"Price: {cost}, Mass: {mass}, Size: x {Size[0]}, y {Size[1]}, z {Size[2]}, " +
                 $"Old target: {OldTarget}, Sex: {(BoysToy? "Male": "Female")}, " +
-                $"Party toy: {PartyToy}");
+                $"Party toy: {PartyToy}", "Print fuction", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public Toy(int c, float m, float[] s, string n, string fname, int old, bool boy, bool party)
             : base(c, m, s, n, fname)
