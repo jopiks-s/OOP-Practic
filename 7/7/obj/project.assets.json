@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Home\\.nuget\\packages\\": {}
+    "C:\\Users\\ilyaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AInstall\\7\\7\\7.csproj",
+      "projectUniqueName": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\7\\7\\7.csproj",
       "projectName": "7",
-      "projectPath": "D:\\AInstall\\7\\7\\7.csproj",
-      "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "D:\\AInstall\\7\\7\\obj\\",
+      "projectPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\7\\7\\7.csproj",
+      "packagesPath": "C:\\Users\\ilyaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ilyaa\\Downloads\\OOP-Practic\\7\\7\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ilyaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -43,14 +43,22 @@ namespace _7
                 return b1.CompareTo(b2) == -1 || b1.CompareTo(b2) == 0;
             }
 
+            public override bool Equals(object obj)
+            {
+                if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+                {
+                    return false;
+                }
+                return CompareTo(obj) == 0;
+            }
             public static bool operator ==(Bus b1, Bus b2)
             {
-                return b1.CompareTo(b2) == 0;
+                return b1.Equals(b2);
             }
 
             public static bool operator !=(Bus b1, Bus b2)
             {
-                return b1.CompareTo(b2) != 0;
+                return !b1.Equals(b2);
             }
         }
         public static List<int> Sort(List<int> list, bool asc = true)
