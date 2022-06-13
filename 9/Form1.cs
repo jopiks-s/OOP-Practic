@@ -15,6 +15,11 @@ namespace _8
     {
         public static List<item> list;
         delegate void handle_exception(string? message);
+        event handle_exception IndexOutOfRange_e;
+        event handle_exception ArrayTypeMismatch_e;
+        event handle_exception InvalidCast_e;
+        event handle_exception DivideByZero_e;
+        event handle_exception Overflow_e;
 
         handle_exception WrongIndex = (m) =>
         {
@@ -47,8 +52,12 @@ namespace _8
             choose_class_combo.SelectedIndex = 0;
 
             list = new List<item>();
+            IndexOutOfRange_e += WrongIndex;
+            ArrayTypeMismatch_e += WrongTypeForArray;
+            InvalidCast_e += WrongCast;
+            DivideByZero_e += WrongDivideByZero;
+            Overflow_e += Overflow;
         }
-
         public void key_press(object s, KeyPressEventArgs e)
         {
             TextBox text_box = (TextBox)s;
@@ -342,7 +351,7 @@ namespace _8
             {
                 if (class_list.Items.Count > 9)
                     throw new OverflowException("10");
-            }catch(OverflowException exc) { Overflow(exc.Message); return; }
+            }catch(OverflowException exc) { Overflow_e(exc.Message); return; }
 
             int cost = 0;
             bool created = true;
@@ -371,7 +380,7 @@ namespace _8
                 }
                 else
                     cost = cost1;
-            }catch(InvalidCastException exc) { WrongCast(exc.Message); }
+            }catch(InvalidCastException exc) { InvalidCast_e(exc.Message); }
             if (!float.TryParse(constructor_class_table.Controls["Mass_text"].Text, NumberStyles.Any, CultureInfo.InvariantCulture, out float mass))
             {
                 MessageBox.Show("Wrong mass value", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -505,7 +514,7 @@ namespace _8
                             old, boy_b, party_b));
                         break;
                 }
-            } catch(ArrayTypeMismatchException exc) { WrongTypeForArray(exc.Message); }
+            } catch(ArrayTypeMismatchException exc) { ArrayTypeMismatch_e(exc.Message); }
             class_list.Items.Add(name);
 
             MessageBox.Show($"Successful created class: {list.Last().Name}", "Class created", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -537,7 +546,7 @@ namespace _8
                     IMath_butt.Enabled = false;
                     IErase_butt.Enabled = false;
                 }
-            }catch(IndexOutOfRangeException exc) { WrongIndex(exc.Message); }
+            }catch(IndexOutOfRangeException exc) { IndexOutOfRange_e(exc.Message); }
         }
 
         private void ISay_butt_Click(object sender, EventArgs e)
@@ -560,7 +569,7 @@ namespace _8
             try
             {
                 ((milk_product)list[class_list.SelectedIndex]).GetCosine();
-            } catch(DivideByZeroException exc) { WrongDivideByZero(exc.Message); }
+            } catch(DivideByZeroException exc) { DivideByZero_e(exc.Message); }
         }
     }
 }

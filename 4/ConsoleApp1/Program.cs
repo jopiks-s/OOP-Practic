@@ -34,12 +34,12 @@ namespace ConsoleApp1
 
         static float Calculate(float f1, float f2, string oper)
         {
-            switch(oper)
+            switch (oper)
             {
                 case "+": return f1 + f2;
                 case "-": return f1 - f2;
                 case "*": return f1 * f2;
-                case "/": if (f2 == 0) throw new TryDivideByZero();  return f1 / f2;
+                case "/": if (f2 == 0) throw new TryDivideByZero(); return f1 / f2;
                 case "^": return (float)Math.Pow(f1, f2);
                 default: throw new WrongOperator(oper);
             }
@@ -88,12 +88,13 @@ namespace ConsoleApp1
 
                     Console.WriteLine(Calculate(left, right, oper));
 
-                } catch(Exception e) 
+                }
+                catch (Exception)
                 {
-                    faile = true; 
+                    faile = true;
                     Console.WriteLine();
                 }
-            }    while (faile);
+            } while (faile);
             Console.ReadLine();
         }
     }

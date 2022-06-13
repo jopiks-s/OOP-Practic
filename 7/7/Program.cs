@@ -51,6 +51,11 @@ namespace _7
                 }
                 return CompareTo(obj) == 0;
             }
+
+            public override int GetHashCode()
+            {
+                return base.GetHashCode();
+            }
             public static bool operator ==(Bus b1, Bus b2)
             {
                 return b1.Equals(b2);
